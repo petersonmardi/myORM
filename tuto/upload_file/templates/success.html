@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success</title>
+    <style>
+        body {
+            width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #191970;
+        }
+        p {
+            text-align: center;
+        }
+        .success {
+            background-color: #8000ffff;
+            height: 400px;
+            width: 100%;
+            color: brown;
+            border-radius: 15px;
+            
+        }
+        .success p {
+            background-color: #00ccff;
+            border-radius: 3.5px;
+            width: 50%;
+            margin-left: 25%;
+            
+        }
+        .success img {
+            margin-left: 27.5%;
+            padding-top: 10px;
+            width: 300px;
+            height: 70px;
+        }
+
+    </style>
 </head>
 <body>
-    <p>File uploaded successful</p>
-    <p>File Name: {{ name }}</p>
+    <div class="success">
+        <img src="{{ url_for('static', filename='img400x110.png') }}" alt="logo">
+        <p>File uploaded successful</p>
+        <p>File Name: {{ name }}</p>
+    </div>
 </body>
 </html>
